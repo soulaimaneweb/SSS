@@ -1,0 +1,763 @@
+/* 
+________ Globale Style ________ 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+:root {
+    /* ______ Colors ______ */
+    --title-color:#212121ec;
+    --text-color:#4e4e52;
+    --text-color-light:#949494;
+    --scroll-bar-thumb:#4e4e52b0;
+    --scroll-bar-thumb-hover:#4e4e52;
+    --container-bg:#f4f5f8;
+    --main-color:#c06186;
+    --contact-bg:#feeef2;
+    --nav-bar-bg:#1e2128;
+
+    /* ______ Padding inline ______ */
+    --padding-inline:10%;
+
+    /* ______ Transitions ______ */
+    --transition-1:0.7s;
+}
+body {
+    background-color: white;
+    overflow-x: hidden;
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bar-thumb);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-bar-thumb-hover);
+}
+
+/* 
+________________________ Header Part ________________________ 
+*/
+.nav-wrapper,
+.nav-close-btn,
+.nav-open-btn,
+.nav-logo {
+    display: none;
+}
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 30px;
+    padding: 25px 40px;
+    z-index: 100;
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+    margin: auto;
+    transition: var(--transition-1);
+}
+.header-section.active {
+    top: 0;
+    width: 100%;
+    padding: 25px var(--padding-inline);
+    box-shadow:  0 0 20px 9px #eeeeee87;
+    border-radius: 0;
+}
+.header-section .logo  {
+    color: #1e2128;
+    font-size: 1.4em;
+    font-family: cursive;
+}
+.header-section .logo span {
+    color: #c06186;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.nav-bar li ,
+.nav-social-links li {
+    display: inline;
+}
+.nav-bar li a {
+    color: var(--title-color);
+    margin: 0 20px;
+    position: relative;
+}
+.nav-bar li a:hover {
+    color: var(--main-color);
+}
+.nav-bar li a::before  {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: var(--transition-1);
+}
+.nav-bar li a:hover::before {
+    width: 100%;
+}
+.nav-social-links li ion-icon {
+    color: var(--title-color);
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+
+
+/* 
+________________________ Home Part ________________________ 
+*/
+.home-section {
+    padding: 150px var(--padding-inline) ;
+    background-color: var(--container-bg);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.home-img {
+    position: relative;
+}
+.img1 {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.home-img .primary {
+    /* border-radius: 50%; */
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;    */
+    background-position: center;
+    background-size: cover;
+    background-repeat: n ;
+}
+.home-img .secondary {
+    position: absolute;
+    bottom: 20px;
+    right: 170px;
+    box-shadow:  0 0 10px #eeeeee87;
+}
+.home-data h1 {
+    font-size: 2.9em;
+    color: var(--title-color);
+    font-weight: 600;
+    line-height: 1.3;
+    
+}
+.home-data p {
+    color: var(--text-color);
+    margin: 10px 0;
+    font-weight: 500;
+    line-height: 1.7;
+}
+.home-data .buttons-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+.home-data .buttons-flex button {
+    padding: 13px 30px;
+    border-radius: 30px;
+}
+.home-data .buttons-flex .primary {
+    background-color: var(--main-color);
+}
+.home-data .buttons-flex .primary a {
+    color: white;
+}
+.home-data .buttons-flex .secondary {
+    border: 2px solid var(--main-color);
+}
+.home-data .buttons-flex .secondary a {
+    color: var(--main-color);
+}
+
+/* 
+________________________ About Part ________________________ 
+*/
+.about-section {
+    padding: 150px var(--padding-inline);
+}
+.about-top {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+    gap: 30px;
+}
+.about-top .left h1 {
+    font-size: 3em;
+    color: var(--title-color);
+    font-weight: 600;
+}
+.about-top .left p {
+    color: var(--text-color);
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.7;
+    margin: 10px 0;
+}
+.about-top .left button {
+    padding: 13px 30px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+}
+.about-top .left button a {
+    color: white;
+}
+.about-top .left button ion-icon {
+    font-size: 1.3em;
+    transform: translateY(4px);
+}
+.right .progress-item {
+    margin-bottom: 30px;
+}
+.progress-item .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.progress-item .wrapper h3 {
+    font-weight: 500;
+    color: var(--title-color);
+}
+.progress-item .wrapper span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.progress-item .progress {
+    width: 100%;
+    height: 3px;
+    background-color: #4e4e52b0;
+    margin-top: 20px;
+    position: relative;
+}
+.progress-item .progress .progress-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.about-bottom  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    gap: 20px;
+    margin-top: 100px;
+}
+.about-card {
+    text-align: center;
+}
+.about-card  h3 {
+    color: var(--title-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.about-card p {
+    color: var(--text-color);
+    font-size: 0.9em;
+    line-height: 1.7;
+}
+
+/* 
+________________________ Projects Part ________________________ 
+*/
+.projects-section {
+    padding: 150px 5%;
+}
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-section h1 {
+    color: var(--title-color);
+    font-weight: 600;
+    font-size: 2.5em;
+}
+.top-section p {
+    color: var(--text-color);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.top-section  button {
+    padding: 13px 30px ;
+    border-radius: 30px;
+    background-color: var(--main-color);
+}
+.top-section  button a {
+    color: white;
+}
+.top-section  button a ion-icon {
+    display: inline-block;
+    transform: translateY(4px);
+    font-size: 1.4em;
+}
+.projects-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow:  0 0 10px #794f5f;
+    border-radius: 10px;
+    height: 550px;
+    cursor: pointer;
+}
+.card img {
+    transition: 1s;
+    filter: blur(3px);
+
+}
+.card:hover img {
+    filter: blur(0px);
+    transform: scale(1.3);
+
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 
+________________________ Contact Part ________________________ 
+*/
+.contact-section{
+    padding: 150px var(--padding-inline);
+}
+.contact-container {
+    padding: 70px;
+    background-color: var(--contact-bg);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+}
+.contact-data h1 {
+    font-size: 2em;
+    color: var(--title-color);
+    font-weight: 600;
+    line-height: 1.4;
+}
+.contact-data p {
+    color: var(--text-color);
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+form  label {
+    color: var(--text-color);
+    font-weight: 500;
+}
+form .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+form .input-wrapper div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+}
+form .input-wrapper div input {
+    height: 45px;
+    padding-left: 15px;
+}
+.textarea {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+textarea {
+    height: 150px;
+    padding: 15px;
+}
+form button {
+    padding: 13px 30px;
+    background-color: var(--main-color);
+    margin-top: 15px;
+    border-radius: 30px;
+}
+form button a {
+    color: white;
+}
+form button a ion-icon {
+    font-size: 1.4em;
+    transform: translateY(5px);
+}
+/* 
+________________________ Footer Part ________________________ 
+*/
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px  var(--padding-inline);
+} 
+.footer-section h3 {
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 400;
+}
+.footer-section h3 span {
+    color: #c06186;
+    font-weight: 700;
+    font-family: cursive;
+    font-size: 1.1em;
+}
+.footer-social-links {
+    display: flex;
+    align-items: center;
+}
+.footer-social-links ion-icon {
+    color: var(--title-color);
+    margin: 0 10px;
+    font-size: 1.3em;
+}
+
+/* 
+________________________ Button Top ________________________ 
+*/
+.btn-top {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    border-radius: 50%;
+    background-color: var(--nav-bar-bg);
+    height: 45px;
+    width: 45px;
+    line-height: 10px;
+    transition: var(--transition-1);
+    opacity: 0;
+    pointer-events: none;
+}
+.btn-top.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.btn-top:hover  {
+    background-color: var(--main-color);
+}
+.btn-top ion-icon {
+    font-size: 1.4em;
+    color: white;
+}
+
+/* 
+________________________ Responsive Desing ________________________ 
+*/
+
+
+.hello-poppup {
+    border: 2px solid #c06186;
+    border-radius: 10px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow:  0 0 10px #c061855f;
+    overflow: hidden;
+    position: absolute  ;
+    top: 3900px;
+    transform: translateX(-100%);
+    padding-inline: 15px;
+    z-index: 100000;
+    transition: 1s;
+    background-color: white;
+
+height: 190px;}
+.hello-poppup.active {
+    transform: translate(0);
+}
+.hello-poppup img {
+    width: 150px;
+}
+.hello-poppup h2  {
+    font-size: 1.3em;
+    color: #1e2128;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.hello-poppup .flex-button  {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+     bottom: 10px;
+     margin-top: 15px;
+}
+.hello-poppup .flex-button  button {
+    border-radius: 30px;
+    padding: 10px 25px;
+    border: 2px solid #c06186;
+    transition: 0.5s;
+}
+.hello-poppup .flex-button  button.primary:hover {
+    background-color: white;
+}
+.hello-poppup .flex-button  button.primary:hover a {
+    color: #c06186;
+}
+
+.hello-poppup .flex-button  button.primary {
+    background-color: #c06186;
+
+}
+.hello-poppup .flex-button  button.primary a {
+    color: #fff;
+}
+.hello-poppup .flex-button  button a {
+    color: #c06186;
+    font-size: 1.1em;font-weight: 600;
+}
+.hello-poppup .flex-button  button:hover {
+    background-color: #c06186;
+}
+.hello-poppup .flex-button  button:hover a {
+    color: white;
+}
+
+/* _____ Tbalet Device _____  */
+@media screen and (max-width:1000px) {
+
+:root {
+    --padding-inline:7%;
+}
+
+
+
+/* ______________ Header Part ______________ */
+.nav-wrapper,
+.nav-close-btn,
+.nav-open-btn {
+    display: block;
+}
+.header-section {
+    width: 90%;
+}
+.nav-close-btn {
+    position: absolute;
+    top: 30px ;
+    right: 30px;
+}
+.nav-close-btn ion-icon {
+    font-size: 2em;
+    color: var(--text-color);
+}
+.nav-list {
+    gap: 0;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 40%;
+    background-color: var(--nav-bar-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    transition: var(--transition-1);
+}
+.nav-list.active  {
+    left: 0;
+}
+.nav-bar {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.nav-bar li a{
+    color: white;
+}
+.nav-wrapper {
+    position: absolute;
+    bottom: 30px;
+}
+.nav-wrapper  li {
+    margin: 5px 0;
+}
+.nav-wrapper  li a {
+    color: var(--text-color);
+}
+.nav-open-btn ion-icon {
+    font-size: 2em;
+    color: var(--title-color);
+}
+
+/* ______________ Home Part ______________ */
+.home-section {
+    padding: 150px var(--padding-inline);
+}
+.home-img .primary {
+    width: 350px;
+}
+.home-img .secondary {
+    right: 90px;
+}
+.home-data h1 {
+    font-size: 2.2em;
+}
+.home-data p {
+    font-size: 0.9em;
+}
+
+
+/* ______________ About Part ______________ */
+.about-top {
+    grid-template-columns: 1fr;
+}
+.about-top .left p {
+    max-width: 550px;
+}
+.about-bottom {
+    gap: 50px;
+}
+
+
+/* ______________ projects Part ______________ */
+.projects-container .project-item {
+    grid-template-columns: 1fr;
+}
+.project-item .item-img img {
+    width: 100%;
+}
+.projects-wrapper {
+    grid-template-columns: 1fr;
+}
+
+
+/* ______________ Contact Part ______________ */
+.contact-container {
+    grid-template-columns: 1fr;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* _____ Phone Device _____  */
+@media screen and (max-width:600px) {
+
+/* ______________ Header Part ______________ */
+.nav-list {
+    width: 70%;
+}
+
+
+/* ______________ Home Part ______________ */
+.home-section {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+}
+.buttons-flex {
+    justify-content: center;
+}
+
+/* ______________ Projects Part ______________ */
+
+.projects-section .top-section {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+
+/* ______________ Contact Part ______________ */
+.contact-container {
+    padding: 60px 30px;
+}
+
+form .input-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+}
+form .input-wrapper div {
+    width: 100%;
+}
+
+
+
+/* ______________ Footer Part ______________ */
+.footer-section {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

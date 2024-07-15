@@ -1,0 +1,146 @@
+#_________ Colors _________#
+  --title-color:#212121ec;
+  --text-color:#4e4e52;
+  --text-color-light:#949494;
+  --scroll-bar-thumb:#4e4e52b0;
+  --scroll-bar-thumb-hover:#4e4e52;
+  --container-bg:#f4f5f8;
+  --main-color:#c06186;
+  --contact-bg:#feeef2;
+  --nav-bar-bg:#1e2128;
+
+#_________ Padding inline _________#
+    --padding-inline:10%;
+
+#_________ Transitions _________#
+    --transition-1:0.7s;
+
+
+714 X 732
+
+#_______________ Header _______________#
+
+alt = Julia home
+
+Home
+About
+Projects
+Contact
+
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-tiktok"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+
+
+info@email.com
+00 (123) 456 78 90  
+
+
+#_______________ Hero _______________#
+
+alt = Julia 
+
+I'm User Interface Desinger & Developer
+
+Hello! I'm Julia, a freelancer user interfcae desinger  & developer based on USA , I'm very passionate about the work that i do.
+
+See My work
+Contact me
+
+
+
+#_______________ About _______________#
+
+What I Do?
+
+doloremque tempora voluptates Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Rem nulla nostrum reprehenderit, provident, quis ut, pariatur illum 
+recusandae quia eum accusamus quisquam sit error eligendi sint quos.
+
+
+
+Web Desing 
+100%
+bg-color = #c7b1dd
+
+Mobile Desing 
+80%
+bg-color = #8caeec
+
+Development
+70%
+bg-color = #b8d4c1
+
+SEO
+90%
+bg-color = #e3a6b6
+
+
+alt = web desing icon
+Web Desing
+
+alt = mobile desing icon
+Mobile Desing
+
+alt = development icon
+Development
+
+alt = seo icon
+SEO
+
+
+#_______________ Projects _______________#
+
+
+Latest Projects
+
+Check out some of my latest projects with creative ideas 
+
+See All projects
+
+
+
+
+
+Web Desing
+Snowlake Theme
+
+doloremque tempora voluptates Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Rem nulla nostrum reprehenderit, provident, quis ut, pariatur illum 
+recusandae quia eum accusamus quisquam sit error eligendi sint quos.
+
+See Project
+
+
+
+
+#_______________ Contact _______________#
+
+alt = envelope icon
+
+If you like what you see , let's work together
+
+I bring rapid solutions to make the life of my clients eassier , Have any questions? 
+Reach out to me from this contact formand I will get back to you shortly.
+
+Name 
+
+email
+
+Message
+
+Send Message
+
+
+#_______________ Footer _______________#
+
+@ 2022 on_line_web. All rights reserved.
+
+
+<ion-icon name="logo-facebook"></ion-icon>
+<ion-icon name="logo-instagram"></ion-icon>
+<ion-icon name="logo-tiktok"></ion-icon>
+<ion-icon name="logo-twitter"></ion-icon>
+
